@@ -7,6 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -18,18 +21,27 @@
 <body>
   <div class="cont">
     <div class="card">
-      <div class="card__image"></div>
+      <div class="card__image">
+        <div class="card__overlay">
+          <img src="./assets/images/icon-view.svg" alt="">
+        </div>
+        <img class="card__image--img" src="./assets/images/image-equilibrium.jpg" alt="" srcset=""></div>
       <div class="card__info">
-        <div class="card__title">Equilibrium #3429</div>
+        <h2 class="card__title">Equilibrium #3429</h2>
         <p class="card__desc">Our Equilibrium collection promotes balance and calm.</p>
         <div class="card__meta">
-          <h2 class="card__time">0.041 ETH</h2>
-          <div class="card__duration">3 days left</div>
+          <p class="card__price">
+            <img class="card__price--icon" src="./assets/images/icon-ethereum.svg" alt="" > 0.041 ETH</p>
+          <div class="card__duration">
+            <img class="card__duration--icon" src="./assets/images/icon-clock.svg" alt="">3 days left</div>
+        </div><!--meta-->
           <div class="card__creator">
             <img class="card__avatar" src="./assets/images/image-avatar.png" alt="" >
-            <p class="card__avatar_desc">Creation of Jules Wyvern</p></div>
+            <p class="card__avatar_desc"><span class="creator__intro">
+              Creation of 
+            </span>
+            <span class="card__author">Jules Wyvern</span></p></div>
         </div>
-      </div>
     </div>
   </div>
 

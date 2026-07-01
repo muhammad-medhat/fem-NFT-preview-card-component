@@ -1,0 +1,95 @@
+:root{
+    --blue-500: hsl(215, 51%, 70%);
+    --cyan-400: hsl(178, 100%, 50%);
+    --blue-950 : hsl(217, 54%, 11%);
+    --blue-900 : hsl(216, 50%, 16%);
+    --blue-800 : hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --radius:15px
+}
+html{
+    font-size: 18px;
+    body{
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        height:100vh;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;    
+        background-color: var(--blue-950);
+        .cont{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: var(--radius);
+            .card{
+                background-color: var(--blue-900);
+                border-radius: var(--radius);
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                color: var(--white);
+                max-width: 300px;
+                padding: 1.5rem;
+                img{max-width: 100%};
+                .card__image{
+                    border-radius: var(--radius);
+                    overflow: hidden;
+                    position: relative;
+                    .card__overlay{
+                        transition:opacity .5s ease-in-out;
+                        position: absolute;
+                        top: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        background-color: var(--cyan-400);
+                        opacity: 0;
+                        &:hover{opacity:0.6}
+                        img{width: 40%;cursor:pointer;}
+                    }
+                }
+                .card__info{
+                    .card__title{
+                        &:hover{color: var(--cyan-400);cursor:pointer;}
+                    }
+                    .card__desc{
+                        /* width: 70%; */
+                        color: var(--blue-800);
+                    }
+                    .card__meta{
+                        /* width: 50%; */
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: solid 1px var(--blue-500);
+                        .card__price{color: var(--cyan-400);}
+                        .card__duration{color: var(--blue-500);}
+                    }
+                    .card__creator{
+                        padding:2rem 0;
+                        display: flex;
+                        justify-content:start;
+                        gap: 1rem;
+                        img.card__avatar{
+                            aspect-ratio: 1/1; border-radius: 50%;
+                            width: 2rem;
+                            border: solid 2px var(--white);
+                        }
+                        span.creator__intro{
+                            color: var(--blue-500);
+                        }
+                        span.card__author{
+                            &:hover{color: var(--cyan-400);cursor: pointer;}
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
